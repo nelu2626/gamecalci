@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+      #check{
+           border: groove #391fe0 6px;
+           width: 30px;
+           border-radius: 10px;
+      }
+      #check2
+      {
+          border: groove #4016ea 6px;
+           width: 30px;
+           border-radius: 10px;
+      }
+      #check3
+      {
+        border: groove hsl(230, 78%, 41%) 6px;
+           width: 100px;
+           height: 20px;
+           border-radius: 20px;
+      }
+      #ch{
+           border: solid black 3px;
+           width: 60px;
+           border-radius: 7px;
+           text-align: center;
+           margin-left: 25px;
+           
+      }
+      form{
+        border: inset black 4px;
+        width: 260px;
+        height: 200px;
+        border-radius: 20px;
+        margin-left: 250px;
+        margin-top: 80px;
+        padding-top: 10px;
+        padding-left: 25px;
+        margin-right: 200px;
+        background-color: white
+
+
+      }
+      body
+      {
+        background-image:-webkit-radial-gradient(skyblue,pink)
+      }
+      
+      
+      
+    </style>
+    <script>
+        function check1()
+        {
+          document.getElementById("check").value = Math.floor(Math.random()*100)
+          document.getElementById("check2").value = Math.floor(Math.random()*100)
+        }
+         function cal()
+         { 
+          let m1 = document.frm.c1.value
+           let m2 = document.frm.c2.value
+           let t = parseInt(m1)+parseInt(m2)
+           let c3 = document.frm.c3.value
+           if(c3==t)
+          document.getElementById("dam").value = "Congratulations you answered  the correct one ";
+          else
+          document.getElementById("dam").value = "oops! better luck next time";
+         }
+      
+        
+    </script>
+    <form name="frm">
+    <h2>Addtion Game Box</h2><br>
+    <input type="" id="check" name="c1">&nbsp; +
+    <input type="" id="check2" name="c2">&nbsp; = 
+    <input type="text"  id="check3" name="c3"><br><br><br>
+    <input type="button" value="Check" id="ch"  onclick="cal()">&nbsp;&nbsp;
+    <input type="button" value="Restart" id="ch" onclick="check1()">
+    
+    
+    
+    </form><br><br>
+    <div>
+    <input type="text" name="sd" id="dam" style=" border: solid white 2px;width: 850px; height: 20px; text-align: center; background-color: rgb(128, 176, 128);"></div>
+   
+</body>
+</html>
